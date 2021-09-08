@@ -1,3 +1,4 @@
 <div class="container">
+  <div *ngIf="message" class="alert alert-{{ message.status }} my-3 mx-2">{{ message.text }}</div>
   <app-header></app-header>
 </div>
