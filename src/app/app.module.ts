@@ -12,6 +12,7 @@ import { SessionService } from './shared/services/session.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientService } from './shared/services/http-client.service';
 import { PostService } from './shared/services/post.service';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PostService } from './shared/services/post.service';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [
     SessionService,

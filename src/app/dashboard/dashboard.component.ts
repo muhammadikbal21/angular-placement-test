@@ -13,6 +13,7 @@ import { SessionService } from '../shared/services/session.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  p: number = 1
   postId?: number;
   post?: Post;
   list: Post[] = [];
