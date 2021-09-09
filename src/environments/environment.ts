@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: '/',
+  appName: 'My First Application.',
+  apiUrl: '/api',
+  apiEndpoints: {
+    GET_ALL_POSTS: 'posts',
+    GET_SINGLE_POST: 'posts/:postId',
+    GET_SINGLE_POST_COMMENTS: 'posts/:postId/comments',
+    GET_USERID: 'users/:userId',
+  }
 };
 
 /*

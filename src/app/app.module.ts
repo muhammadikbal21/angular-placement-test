@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -9,6 +10,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SessionService } from './shared/services/session.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientService } from './shared/services/http-client.service';
+import { PostService } from './shared/services/post.service';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
   ],
   providers: [
-    SessionService
+    SessionService,
+    HttpClientService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })

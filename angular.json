@@ -82,7 +82,8 @@
               "browserTarget": "angular-placement-test:build:production"
             },
             "development": {
-              "browserTarget": "angular-placement-test:build:development"
+              "browserTarget": "angular-placement-test:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
