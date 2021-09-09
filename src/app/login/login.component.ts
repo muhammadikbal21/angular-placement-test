@@ -72,6 +72,7 @@ export class LoginComponent implements OnInit {
         this.form.valid && 
         formData[LoginFormField.USERNAME] === user.username &&
         formData[LoginFormField.PASSWORD] === user.username) {
+        this.storage.setItem('user', JSON.stringify(user));
         this.sessionService.setSession(user.username);
         this.router.navigateByUrl('dashboard');
       } else {

@@ -9,7 +9,49 @@
       </div>
     </a>
     <ng-template #helloUsername>
-      <h3>Welcome, <span class="text-primary">{{ username }}</span></h3>
+      <button class="btn" data-bs-toggle="modal" data-bs-target="#userId">
+        <h3>Welcome, <span class="text-primary">{{ username }}</span></h3>
+      </button>
     </ng-template>
+  </div>
+</div>
+
+<!-- Modal Login Form -->
+<div class="modal fade" id="userId" tabindex="-1" aria-labelledby="userIdLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginFormLabel">Detail User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <dl class="row">
+          <dt class="col-3">
+            <p>
+              Full Name
+            </p>
+          </dt>
+          <dd class="col-9">
+            <p><i class="bi bi-person-check me-3"></i>{{ user.name }}</p>
+          </dd>
+          <dt class="col-3">
+            <p>
+              Username
+            </p>
+          </dt>
+          <dd class="col-9">
+            <p><i class="bi bi-person-badge-fill me-3"></i>{{ user.username }}</p>
+          </dd>
+          <dt class="col-3">
+            <p>
+              Email
+            </p>
+          </dt>
+          <dd class="col-9">
+            <p><i class="bi bi-at me-3"></i>{{ user.email }}</p>
+          </dd>
+        </dl>
+      </div>
+    </div>
   </div>
 </div>
