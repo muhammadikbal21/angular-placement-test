@@ -55,9 +55,4 @@ export class HttpClientService {
         retry(3)
       );
   }
-
-  // getData(): Observable<any> {
-  //   const url = "https://jsonplaceholder.typicode.com/posts"
-  //   return this.http.get<any>(url)
-  // }
 }

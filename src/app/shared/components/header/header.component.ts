@@ -8,6 +8,7 @@ import { SessionService } from '../../services/session.service';
 })
 export class HeaderComponent implements OnInit {
   authorized: boolean = false;
+  username!: string;
 
   constructor(
     private readonly sessionService: SessionService
@@ -15,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.authorized = (this.sessionService.getSession() !== null);
+    this.username = this.sessionService.getSession()
   }
 
 }

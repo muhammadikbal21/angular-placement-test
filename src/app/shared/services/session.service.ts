@@ -16,8 +16,8 @@ export class SessionService {
     this.storage.setItem('flash', value);
   }
 
-  public setSession(): void {
-    this.storage.setItem('authorized', 'true');
+  public setSession(username: string): void {
+    this.storage.setItem('authorized', username);
   }
 
   public getSession(): string {

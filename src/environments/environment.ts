@@ -12,6 +12,7 @@ export const environment = {
     GET_SINGLE_POST: 'posts/:postId',
     GET_SINGLE_POST_COMMENTS: 'posts/:postId/comments',
     GET_USERID: 'users/:userId',
+    GET_USERS: 'users',
   }
 };
 
