@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit {
         formData[LoginFormField.PASSWORD] === user.username) {
         this.storage.setItem('user', JSON.stringify(user));
         this.sessionService.setSession(user.username);
-        this.router.navigateByUrl('dashboard');
+        this.router.navigateByUrl('dashboard/posts');
       } else {
         this.message = {
           status: 'danger',
